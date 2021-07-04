@@ -41,6 +41,10 @@ p.price-tag {
     font-family: "Roboto", sans-serif;
     color: #515151;
 }
+p.designed-by {
+    font-size: 13px;
+    color: #a5a58d;
+}
 button,
 button.contact-btn,
 button.load-btn,
@@ -51,50 +55,99 @@ button.contact-footer-btn {
     cursor: pointer;
     color: #7b435b;
 }
-/* button::after {
-    width: 300%;
-    height: 300%;
-    left: -300%;
-    transform: rotate(45deg);
-    background-color: #f21170;
-    transition: all 300ms ease;
-}
-button:hover {
+/* SMALL PRIMARY BUTTON */
+.small-primary-btn {
+    font-size: 14px;
+    font-weight: 400;
     color: #fff;
-    z-index: 10;
-    font-weight: 600;
+    letter-spacing: 0.09em;
+    margin-top: 20px;
+    width: 135px;
+    height: 35px;
+    background-color: #a5a58d;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.small-primary-btn:hover {
+    background-color: #6b705c;
+    transition: 300ms;
+}
+.small-primary-btn:focus {
+    background-color: #414436;
+}
+.small-primary-btn i {
+    font-size: 16px;
+}
+/* SMALL PRIMARY BUTTON END*/
+
+/* SMALL OUTLINED BUTTON */
+.small-outlined-btn {
+    font-size: 14px;
+    font-weight: 400;
+
+    letter-spacing: 0.09em;
+    width: 135px;
+    height: 35px;
+    color: #a5a58d;
+    background-color: #fff;
+    border: 0.8px solid #a5a58d;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.small-outlined-btn:hover {
+    background-color: #a5a58d;
+    color: #fff;
+    transition: 300ms;
+}
+.small-outlined-btn:focus {
+    background-color: #6b705c;
+}
+.small-outlined-btn i {
+    font-size: 16px;
+}
+/* SMALL OUTLINED BUTTON END*/
+
+/* LARGE PRIMARY BUTTON */
+.large-primary-btn {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.09em;
+    margin-top: 20px;
+    width: 165px;
+    height: 45px;
+    background-color: #a5a58d;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.large-primary-btn:hover {
+    background-color: #6b705c;
+    transition: 300ms;
+}
+/* LARGE PRIMARY BUTTON END*/
+
+.large-outlined-btn {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.09em;
+    margin-top: 20px;
+    width: 295px;
+    height: 45px;
+    color: #a5a58d;
+    background-color: #fff;
+    border: 0.8px solid #a5a58d;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.large-outlined-btn:hover {
+    background-color: #a5a58d;
+    color: #fff;
+    transition: 300ms;
 }
 
-button:hover::after {
-    left: -100%;
-}
-
-button:hover {
-    border: 2px solid #f21170;
-} */
-
-/* =============== Hover Effect 5 ======================== */
-/* On hover after element moves from -300% in left to -100%, the lement is rotate 45 degree to be a  */
-/* sharp edge. To get the fill effect the element is made 300% in size, parent element's overflow is  */
-/* set to hidden */
-
-/* .btn5 {
-    overflow: hidden;
-    transition: all 300ms ease;
-}
-
-.btn5 h4 {
-    color: #111;
-}
-
-.btn5:after {
-    width: 300%;
-    height: 300%;
-    left: -300%;
-    transform: rotate(45deg);
-    background-color: #f21170;
-    transition: all 300ms ease;
-}
 /* ROOT END */
 
 ul {
@@ -102,13 +155,6 @@ ul {
 }
 li {
     text-decoration: none;
-}
-ul li a {
-    color: #a5a58d;
-}
-ul li a:hover {
-    text-decoration: underline;
-    transition: 200ms;
 }
 h2 {
     font-size: 48px;
@@ -212,29 +258,6 @@ h4 {
 .desc2 {
     flex-basis: 40%;
 }
-.desc2 .contact-btn {
-    font-size: 14px;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: 0.09em;
-    margin-top: 20px;
-    width: 135px;
-    height: 35px;
-    background-color: #a5a58d;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: inline-block;
-}
-.desc2 .contact-btn:hover {
-    background-color: #6b705c;
-}
-.desc2 .contact-btn:focus {
-    background-color: #414436;
-}
-.desc2 .contact-btn i {
-    font-size: 16px;
-}
 /* HERO END */
 
 /* ABOUT */
@@ -251,6 +274,10 @@ h4 {
     width: 460px;
     border-top-right-radius: 120px;
     overflow: hidden;
+    background-image: url("img/collection-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
 }
 .about-img img {
     width: 100%;
@@ -303,38 +330,22 @@ h4 {
 .collection-img .box-wrapper {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     width: 100%;
     height: 100%;
 }
 .collection-img .box-wrapper .box {
-    flex-basis: 90%;
+    height: 90%;
 }
 .collection-img .box-wrapper .box img {
     width: 100%;
+    height: 100%;
 }
 .collection-img .box-wrapper .price {
-    flex-basis: 10%;
+    height: 10%;
     padding-left: 30px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-}
-#collections .load-btn {
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: 0.09em;
-    margin-top: 20px;
-    width: 165px;
-    height: 45px;
-    background-color: #a5a58d;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-#collections .load-btn:hover {
-    background-color: #6b705c;
 }
 /* COLLECTION END */
 
@@ -352,28 +363,10 @@ h4 {
     margin-top: 30px;
     max-width: 810px;
 }
-#contact .contact-btn {
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: 0.09em;
-    margin-top: 20px;
-    width: 165px;
-    height: 45px;
-    background-color: #a5a58d;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-#contact .contact-btn:hover {
-    background-color: #6b705c;
-}
-#contact .contact-btn:focus {
-    background-color: #414436;
-}
-#contact .contact-btn i {
-    font-size: 18px;
-    color: #fff;
+#contact .contact-button {
+    display: flex;
+    flex-direction: row;
+    gap: 0 10px;
 }
 /* CONTACT END */
 
@@ -382,7 +375,7 @@ h4 {
     margin-top: 320px;
     padding: 60px 0;
     width: 100%;
-    height: 240px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -404,29 +397,6 @@ h4 {
 .contact-footer {
     flex-basis: 30%;
 }
-.footer .contact-footer .contact-footer-btn {
-    font-size: 14px;
-    font-weight: 400;
-    color: #a5a58d;
-    letter-spacing: 0.09em;
-    width: 135px;
-    height: 35px;
-    background-color: #fff;
-    border: 0.8px solid #a5a58d;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-.footer .contact-footer .contact-footer-btn:hover {
-    background-color: #a5a58d;
-    color: #fff;
-    transition: 300ms;
-}
-.footer .contact-footer .contact-footer-btn:focus {
-    background-color: #6b705c;
-}
-.footer .contact-footer .contact-footer-btn i {
-    font-size: 16px;
-}
 .links {
     flex-basis: 15%;
     margin-top: 30px;
@@ -440,6 +410,13 @@ h4 {
 }
 .links ul li a {
     text-decoration: none;
+}
+.links ul li,
+.links ul li a {
+    color: #a5a58d;
+}
+.links ul li a:hover {
+    text-decoration: underline;
 }
 .follow-us {
     flex-basis: 15%;
@@ -456,8 +433,11 @@ h4 {
 }
 .follow-us ul li a i {
     font-size: 24px;
+    color: #a5a58d;
 }
-
+.footer-text {
+    margin-top: 30px;
+}
 /* FOOTER END */
 
 /* RESPONSIVE */
