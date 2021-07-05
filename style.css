@@ -767,7 +767,7 @@ h4 {
         flex-direction: row;
     }
     .links ul li:not(:last-child) {
-        margin-right: 12px;
+        margin-right: 8px;
     }
     .links ul li a {
         text-decoration: none;
