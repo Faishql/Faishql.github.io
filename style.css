@@ -753,7 +753,7 @@ h4 {
         transform: translate(-50%, -50%);
         height: 1px;
         width: 80%; /* or 100px */
-        border-bottom: 1.5px solid #a5a58d;
+        border-bottom: 0.8px solid #a5a58d;
     }
     .contact-footer {
         flex-basis: 30%;
@@ -799,6 +799,9 @@ h4 {
     }
     .footer-text {
         margin-top: 30px;
+    }
+    .footer-text p.designed-by a {
+        color: #a5a58d;
     }
 }
 /* @media only screen and (max-width: 576px) {
